@@ -31,7 +31,6 @@ The objective of this course project is to create an independent tidy data set w
 /### Read and merge the training data set and the test data set
 /##  Read in the training data set
 /#     Read "subject-train.txt", "X_train.txt" and "Y_train.txt" into three data frames
-
 sub_train <- read.table("subject_train.txt")
 X_train <- read.table("X_train.txt", colClasses="numeric")
 Y_train <- read.table("y_train.txt")
