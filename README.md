@@ -35,14 +35,14 @@ The objective of this course project is to create an independent tidy data set w
 	X_train <- read.table("X_train.txt", colClasses="numeric")
 	Y_train <- read.table("y_train.txt")
 
-/#     Add variable names for the three data frames
+/#     Adding variable names for the three data frames
 
 	attNames <- read.table("features.txt")
 	names(X_train) <- attNames[,2]
 	names(Y_train) <- "Activity_id"
 	names(sub_train) <- "Subject"
 
-/#     Merge the three data frames to form the training data set
+/#     Merging the three data frames to form the training data set
 
 	training <- cbind(sub_train, Y_train, X_train)
 
@@ -52,13 +52,13 @@ The objective of this course project is to create an independent tidy data set w
 	X_test <- read.table("X_test.txt", colClasses="numeric")
 	Y_test <- read.table("y_test.txt")
 
-/#     Add variable names for the three data frames
+/#     Adding variable names for the three data frames
 
 	names(X_test) <- attNames[,2]
 	names(Y_test) <- "Activity_id"
 	names(sub_test) <- "Subject"
 
-/#     Merge the three data frames to form the test data set
+/#     Merging the three data frames to form the test data set
 
 	test <- cbind(sub_test, Y_test, X_test)
 
@@ -109,5 +109,5 @@ The objective of this course project is to create an independent tidy data set w
 	finalData <- dcast(x, Subject+Activity ~ variable,mean)        
 
 
-###    Save the new data set in a TXT file
+### 5. Save the new data set in a TXT file
 	write.table(finalData, "ProjectResult.txt", row.name=FALSE)
