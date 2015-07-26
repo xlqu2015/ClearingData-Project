@@ -29,8 +29,7 @@ The objective of this course project is to create an independent tidy data set w
 ## Scripts in run_analysis.R
 
 ### 1. Read and merge the training data set and the test data set
-/##    Read in the training data set
-/#     Read "subject-train.txt", "X_train.txt" and "Y_train.txt" into three data frames
+/##    Read in the training data set: Reading "subject-train.txt", "X_train.txt" and "Y_train.txt" into three data frames
 
 	sub_train <- read.table("subject_train.txt")
 	X_train <- read.table("X_train.txt", colClasses="numeric")
@@ -47,8 +46,7 @@ The objective of this course project is to create an independent tidy data set w
 
 	training <- cbind(sub_train, Y_train, X_train)
 
-/##    Read in the test data set
-/#     Read "subject_test.txt", "X_test.txt" and "Y_test.txt" into three data frames
+/##    Read in the test data set: Reading "subject_test.txt", "X_test.txt" and "Y_test.txt" into three data frames
 
 	sub_test <- read.table("subject_test.txt")
 	X_test <- read.table("X_test.txt", colClasses="numeric")
@@ -69,8 +67,7 @@ The objective of this course project is to create an independent tidy data set w
 	completeData <- rbind(training, test)
 
 
-### 2. Extract the mean and standard deviation of each measurement, and 
-### 4. Label the columns with descriptive variable names
+### 2. Extract the mean and standard deviation of each measurement, and label the columns with descriptive variable names
 	targetData <- completeData[,1:2]
 
 	targetMean <- completeData[,grep("mean()", names(completeData), fixed=TRUE)]
@@ -104,7 +101,7 @@ The objective of this course project is to create an independent tidy data set w
 	targetData <- merge(targetData, activity, by.x="Activity_id", by.y="id", all=TRUE)
 
 
-### 5. Create the new data set
+### 4. Create the new data set
 	targetData <- targetData[order(targetData$Subject, targetData$Activity_id), ]
 
 	library(reshape2)
