@@ -21,7 +21,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 ### 3. Link the acitivity names with Activity_id in the data set
 
-### 5. Create the tidy data set of the average of each mean measurement for each activity and each subject
+### 4. Create the tidy data set of the average of each mean measurement for each activity and each subject
 
 
 ## Variables in the tidy data set (in the order of columns in the tidy data set)
