@@ -47,7 +47,8 @@ The objective of this course project is to create an independent tidy data set w
 
 	training <- cbind(sub_train, Y_train, X_train)
 
-####   Form in the test data set: Reading "subject_test.txt", "X_test.txt" and "Y_test.txt" into three data frames
+####   Form in the test data set
+#####  Reading "subject_test.txt", "X_test.txt" and "Y_test.txt" into three data frames
 
 	sub_test <- read.table("subject_test.txt")
 	X_test <- read.table("X_test.txt", colClasses="numeric")
