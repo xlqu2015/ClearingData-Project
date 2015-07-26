@@ -12,19 +12,19 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 
 ## Steps to transform from the raw data to the tidy data set
-### 1. Read and merge the training data set and the test data set to form the complete data set
+#### 1. Read and merge the training data set and the test data set to form the complete data set
 * Prepare the training data set, including reading "subject-train.txt", "X_train.txt" and "Y_train.txt" into three data frames, adding variable names for the three data frames, and merging the three data frames to form the training data set
 * Prepare the test data set, including reading "subject_test.txt", "X_test.txt" and "Y_test.txt" into three data frames, adding variable names for the three data frames, and merging the three data frames to form the test data set
 * Merge the training data set and the test data set
 
-### 2. Extract the mean and standard deviation of each measurement from the complete data set, and then label the columns with descriptive variable names
+#### 2. Extract the mean and standard deviation of each measurement from the complete data set, and then label the columns with descriptive variable names
 
-### 3. Link the acitivity names with Activity_id in the data set
+#### 3. Link the acitivity names with Activity_id in the data set
 
-### 4. Create the tidy data set of the average of each mean measurement for each activity and each subject
+#### 4. Create the tidy data set of the average of each mean measurement for each activity and each subject
 
 
-## Variables in the tidy data set (in the order of columns in the tidy data set)
+## Variables in the tidy data set (in the order of columns)
 
 | Variable (header)		| Description     |
 |---------------------|-----------------|
